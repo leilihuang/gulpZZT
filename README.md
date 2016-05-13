@@ -3,6 +3,7 @@
 
 ### 执行命令
 * npm install 下载插件包
+* gulp serve 开发环境，自动打开页面，实时刷新页面
 * gulp test 一般打包，无压缩  
 * gulp cdn发布线上版本打包，自动压缩css,js以及添加随机数后缀，避免缓存问题
 
