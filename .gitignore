@@ -1,0 +1,8 @@
+node_modules
+dist
+.svn
+.tmp
+cdn
+project
+*.zip
+.DS_Store

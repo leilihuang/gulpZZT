@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>开发平台</title>
+    <meta name="description" content="选择账号类型">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- build:css css/index.css-->
+    <!-- inject:css-->
+    <!-- endinject-->
+    <link rel="stylesheet" href="../css/index.css">
+    <!-- endbuild-->
+</head>
+<body>
+<!--公用头部-->
+ @@include('../headFoot/head.html')
+<!--公用头部-->
+
+<div class="contentBox">
+    <div class="menuCrumbs">
+        <span class="m_wz">你当前的位置：</span>
+        <a href="/merchant/addservice.html" class="m_pre">管理控制台  > </a>
+        <a href="#" class="m_new">选择账号类型</a>
+    </div>
+    <div class="conBox">
+       <div class="m_flow">
+           <div class="flow cur">
+               <i class="radius radCur text-c">1</i>
+               <span class="text text-c">选择账号类型</span>
+           </div>
+           <div class="flow">
+               <i class="radius text-c">2</i>
+               <span class="text text-c">提交申请</span>
+           </div>
+           <div class="flow">
+               <i class="radius text-c">3</i>
+               <span class="text text-c">等待审核</span>
+           </div>
+           <div class="flow">
+               <i class="radius text-c">4</i>
+               <span class="text text-c">审核结果</span>
+           </div>
+           <div class="r_sj"></div>
+           <div class="clear"></div>
+       </div>
+        <div class="tips_tit text-c">请选择开发者账号类型</div>
+        <div class="tips_tis text-c">账号类型开通后不能更改，请根据实际情况选择</div>
+        <div class="s_box">
+            <div class="s_component">
+                <div class="title text-c">企业开发者</div>
+                <div class="t_js text-c">企业开发者内容简介企业开发者企业开发者内容简介企业开发者</div>
+                <div class="t_gn text-c">便捷.安全.灵活</div>
+                <div class="logImg"></div>
+                <div data-value="1" class="btns text-c select-btn">选择并继续</div>
+            </div>
+            <div class="s_user">
+                <div class="title text-c">个人开发者</div>
+                <div class="t_js text-c">企业开发者内容简介企业开发者企业开发者内容简介企业开发者</div>
+                <div class="t_gn text-c">便捷.安全.灵活</div>
+                <div class="logImg"></div>
+                <div data-value="2" class="btns text-c ">选择并继续</div>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+</div>
+
+<!--公用尾部-->
+    @@include('../headFoot/foot.html')
+<!--公用尾部-->
+
+<!--build:js js/lib.js-->
+<script type="text/javascript" src="../lib/jquery.min.js"></script>
+<script type="text/javascript" src="../lib/icheck.min.js"></script>
+<!--endbuild-->
+
+<!--build:js js/index.js-->
+
+<!--inject:js-->
+<!--endinject-->
+<script type="text/javascript" src="../js/addApp.js"></script>
+<script type="text/javascript" src="../js/addEdit.js"></script>
+<!--endbuild-->
+</body>
+</html>
