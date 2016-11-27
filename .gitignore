@@ -5,4 +5,5 @@ dist
 cdn
 project
 *.zip
+.idea/
 .DS_Store

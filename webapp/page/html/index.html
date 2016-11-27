@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../css/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/bootstrap/bootstrap-select.min.css">
+    <link rel="stylesheet" href="../css/bootstrap/datetimepicker.css">
+    <!-- build:css css/index.min.css-->
+    <link rel="stylesheet" href="../css/iconfont/iconfont.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <!-- endbuild-->
+    <title>首页</title>
+</head>
+<body>
+<div class="index-box">
+    <!--顶部navbar导航-->
+    <div class="index-nav-box navbar-fixed-top clearfix">
+        <div class="navbar-form navbar-left" role="search">
+            <div class="btn-group">
+                <div class="col-md-12">
+                    <select id="statePhone" class="form-control selectpicker" style="display: none;">
+                        <option value="0">空闲</option>
+                        <option value="1">忙碌</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Search">
+            </div>
+            <button class="btn btn-primary">
+                <i class="iconfont icon-tubiao210"></i>
+            </button>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li role="presentation" class="moreRen">
+                    <a href="">
+                        <i class="iconfont icon-duoren"></i>
+                        <span class="badge">42</span>
+                    </a>
+                </li>
+                <li class="dropdown grzx">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <i class="iconfont icon-center"></i><span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="#">个人中心</a></li>
+                    </ul>
+                </li>
+                <li class="logout">
+                    <a href="">
+                        <i class="iconfont icon-tuichu"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!--下面内容模块-->
+    <div class="index-con-box clearfix">
+        <!--左侧菜单-->
+        <div id="sidebar-box" class="con-left sidebar pad-cur">
+            <!--<div data-index="0" class="icon-tubiao210 iconfont active"></div>-->
+            <!--<div data-index="1" class="icon-baobiao iconfont"></div>-->
+            <!--<div data-index="2" class="icon-icon iconfont"></div>-->
+            <!--<div data-index="3" class="icon-erji3 iconfont"></div>-->
+        </div>
+
+
+        <!--tab切换中间-->
+        <div id="tab-box" class="con-tab container">
+            <ul id="mayTab" class="nav nav-tabs" role="tablist">
+                <li role="presentation" class="active">
+                    <a data-tpl="tpl-tab1-box" data-toggle="tab" href="#newTh">当前通话</a>
+                </li>
+                <li role="presentation">
+                    <a data-tpl="tpl-tab2-box" data-toggle="tab" href="#myTh">我的通话</a>
+                </li>
+                <li role="presentation">
+                    <a data-tpl="tpl-tab3-box" data-toggle="tab" href="#hostory">来电历史</a>
+                </li>
+            </ul>
+            <div class="tab-content">
+                <div id="newTh" class="active tab-con tab1">
+                    <div class="list-box">
+
+                    </div>
+                </div>
+                <div id="myTh" class="tab-con tab1 tab2">
+                    <div class="row search-box">
+                        <div class="col-md-12">
+                            <div class="input-group">
+                                <div class="input-group-btn">
+                                    <select class="form-control selectpicker" style="display: none;">
+                                        <option value="0">全部</option>
+                                        <option value="1">已接听</option>
+                                        <option value="1">未接听</option>
+                                    </select>
+                                </div>
+                                <input placeholder="请输入主叫或者被叫" type="text" class="form-control">
+                                <div class="input-group-btn verticalTop">
+                                    <button class="btn btn-default" type="button" data-toggle="modal"
+                                            data-target="#myModal">
+                                        高级搜索
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="list-box">
+
+                    </div>
+                </div>
+                <div id="hostory" class="tab-con tab1 tab2 tab3">
+                    <div class="row search-box">
+                        <div class="col-md-12">
+                            <div class="input-group">
+                                <input placeholder="请输入主叫或者被叫" type="text" class="form-control">
+                                <div class="input-group-btn verticalTop">
+                                    <button class="btn btn-default" type="button" data-toggle="modal"
+                                            data-target="#myModal">
+                                        高级搜索
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="list-box">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--模态窗口-->
+        @@include('../template/modal.html')
+        <!--////模态窗口-->
+        <!--右侧内容模块-->
+        <div id="content-box" class="con-cencer content container">
+
+        </div>
+    </div>
+</div>
+
+<div class="temp-box" style="display: none">
+    @@include('../template/utilTemplate.html')
+</div>
+
+<!--build:js js/lib.min.js-->
+<script type="text/javascript" src="../js/lib/jquery.min.js"></script>
+<script type="text/javascript" src="../js/lib/bootstrap.min.js"></script>
+<script type="text/javascript" src="../js/lib/bootstrap-select.min.js"></script>
+<script type="text/javascript" src="../js/lib/bootstrap-datetimepicker.min.js"></script>
+<script type="text/javascript" src="../js/lib/template.js"></script>
+<script type="text/javascript" src="../js/lib/bootstrap-datetimepicker.zh-CN.js"></script>
+<!--endbuild-->
+<script type="text/javascript" src="../js/lib/mock.js"></script>
+<script type="text/javascript" src="../js/mock/mockData.js"></script>
+<!--build:js js/index.min.js-->
+<script type="text/javascript" src="../js/logic/index.js"></script>
+<!--endbuild-->
+
+</body>
+</html>

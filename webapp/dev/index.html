@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../css/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="css/index.min.css">
+    <title>首页</title>
+</head>
+<body>
+<div class="index-box">
+    <!--顶部navbar导航-->
+    <div class="index-nav-box navbar-fixed-top clearfix">
+        <div class="navbar-form navbar-left" role="search">
+            <div class="btn-group">
+                <button type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown">
+                    Action <span class="caret"></span>
+                </button>
+                <ul id="myToggler" class="dropdown-menu" role="menu">
+                    <li><a href="">Action1</a></li>
+                    <li><a href="">Action2</a></li>
+                    <li><a href="">Action3</a></li>
+                </ul>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Search">
+            </div>
+            <button class="btn btn-primary">
+                <i class="iconfont icon-tubiao210"></i>
+            </button>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li role="presentation" class="moreRen">
+                    <a href="">
+                        <i class="iconfont icon-duoren"></i>
+                        <span class="badge">42</span>
+                    </a>
+                </li>
+                <li class="dropdown grzx">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <i class="iconfont icon-center"></i><span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="#">个人中心</a></li>
+                    </ul>
+                </li>
+                <li class="logout">
+                    <a href="">
+                        <i class="iconfont icon-tuichu"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!--下面内容模块-->
+    <div class="index-con-box clearfix">
+        <!--左侧菜单-->
+        <div id="sidebar-box" class="con-left sidebar">
+            <!--<div data-index="0" class="icon-tubiao210 iconfont active"></div>-->
+            <!--<div data-index="1" class="icon-baobiao iconfont"></div>-->
+            <!--<div data-index="2" class="icon-icon iconfont"></div>-->
+            <!--<div data-index="3" class="icon-erji3 iconfont"></div>-->
+        </div>
+        <!--tab切换中间-->
+        <div class="con-tab">
+            <ul id="mayTab" class="nav nav-tabs" role="tablist">
+                <li role="presentation" class="active"><a data-toggle="tab" href="#newTh">当前通话</a></li>
+                <li role="presentation"><a data-toggle="tab" href="#myTh">我的通话</a></li>
+                <li role="presentation"><a data-toggle="tab" href="#hostory">来电历史</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="newTh" class="active tab-con tab1">
+                    <div id="list-box" class="list-box">
+                        <div class="lists active">
+                            <div class="row">
+                                <div class="col-md-6">18802789980</div>
+                                <div class="col-md-6 text-right">21:23:42</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">未知客户</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-10 zuo-xi">
+                                    24453[24453]
+                                    <i class="iconfont icon-jiantouyou"></i> 坐席
+                                </div>
+                                <div class="col-md-2 text-right">
+                                    <i class="iconfont icon-5dianhuazhuanbo phone-success"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lists">
+                            <div class="row">
+                                <div class="col-md-6">18802789980</div>
+                                <div class="col-md-6 text-right">21:23:42</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">未知客户</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-10 zuo-xi">
+                                    24453[24453]
+                                    <i class="iconfont icon-jiantouyou"></i> 坐席
+                                </div>
+                                <div class="col-md-2 text-right">
+                                    <i class="iconfont icon-yibo phone-warning"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lists ">
+                            <div class="row">
+                                <div class="col-md-6">18802789980</div>
+                                <div class="col-md-6 text-right">21:23:42</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">未知客户</div>
+                            </div>
+                            <div class="row ">
+                                <div class="col-md-10 zuo-xi">
+                                    24453[24453]
+                                    <i class="iconfont icon-jiantouyou"></i> 坐席
+                                </div>
+                                <div class="col-md-2 text-right">
+                                    <i class="iconfont icon-5dianhuazhuanbo phone-success"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="myTh" class="tab-con">22222</div>
+                <div id="hostory" class="tab-con">3333</div>
+            </div>
+        </div>
+        <!--右侧内容模块-->
+        <div class="con-cencer content">
+            <div class="form-horizontal">
+                <div class="row han">
+                    <div class="col-md-4 form-group">
+                        <label class="col-md-5 control-label">呼叫类型</label>
+                        <div class="col-sm-7">
+                            <input type="text" class="form-control" placeholder="来电" disabled="">
+                        </div>
+                    </div>
+                    <div class="col-md-4 form-group">
+                        <label class="col-md-5 control-label">主叫</label>
+                        <div class="col-sm-7">
+                            <input type="text" class="form-control" placeholder="18802789980" disabled="">
+                        </div>
+                    </div>
+                    <div class="col-md-4 form-group">
+                        <label class="col-md-5 control-label">被叫</label>
+                        <div class="col-sm-7">
+                            <input type="text" class="form-control" placeholder="18802789980" disabled="">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 form-group">
+                        <label class="col-md-5 control-label">来电时间</label>
+                        <div class="col-sm-7">
+                            <input type="text" class="form-control" placeholder="21:49:48" disabled="">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col-md-12">
+                        <label class="col-md-2 control-label">来电原因</label>
+                        <div class="col-md-10 " id="con-select">
+                            <select class="form-control one ">
+
+                            </select>
+                            <select class="form-control two ">
+
+                            </select>
+                            <select class="form-control three ">
+
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 form-group">
+                        <label class="col-md-3 control-label">来电时间</label>
+                        <div class="col-md-8">
+                            <textarea class="col-md-8 form-control" placeholder="Textarea" rows="5"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="btn-box">
+                    <button type="button" class="btn btn-success">保存</button>
+                </div>
+            </div>
+            <div class="panel panel-inverse" data-sortable-id="table-basic-2">
+                <div class="page-header">
+                    <h3>历史来电记录</h3>
+                </div>
+                <div class="panel-body">
+                    <table class="table table-hover">
+                        <thead>
+                        <tr>
+                            <th></th>
+                            <th>主叫</th>
+                            <th>来电时间</th>
+                            <th>处理坐席</th>
+                            <th>来电原因</th>
+                            <th>备注内容</th>
+                        </tr>
+                        </thead>
+                        <tbody id="table-body">
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="temp-box" style="display: none">
+    <!--sideMenu菜单-->
+<script type="text/html" id="tpl-side-menu">
+    {{each sideMenu as menu}}
+    <div data-index="{{menu.id}}" class="{{menu.icon}} iconfont"></div>
+    {{/each}}
+</script>
+<!--表格-->
+<script type="text/html" id="tpl-table-body">
+    {{each list as tab}}
+    <tr>
+        <td class="col-md-1">{{tab.id}}</td>
+        <td class="col-md-2">{{tab.zhujiao}}</td>
+        <td class="col-md-2">{{tab.time}}</td>
+        <td class="col-md-2">{{tab.phone}}</td>
+        <td class="col-md-2">{{tab.text}}</td>
+        <td class="col-md-3">{{tab.ramark}}</td>
+    </tr>
+    {{/each}}
+</script>
+<!---select下拉框-->
+<script type="text/html" id="tpl-level-box">
+    {{each list as opt}}
+    <option value="{{i}}">{{opt.name}}</option>
+    {{/each}}
+</script>
+</div>
+
+
+<script src="js/lib.min.js"></script>
+<script type="text/javascript" src="../js/lib/mock.js"></script>
+<script type="text/javascript" src="../js/mock/mockData.js"></script>
+<script src="js/index.min.js"></script>
+
+</body>
+</html>

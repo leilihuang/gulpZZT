@@ -1,0 +1,179 @@
+.bor-bottom {
+  border-bottom: 1px solid #ccc;
+}
+.phone-success {
+  color: #23d026;
+}
+.phone-warning {
+  color: #f0ad4e;
+}
+.overHide {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.one,
+.two,
+.three {
+  width: 150px;
+  display: inline-block;
+}
+textarea {
+  resize: none;
+}
+.mar-top {
+  margin-top: 20px;
+}
+.btn-group {
+  margin-bottom: 0;
+}
+.verticalTop {
+  vertical-align: top;
+}
+.control-label {
+  width: 100px;
+}
+.modal .modal-body .one,
+.modal .modal-body .two,
+.modal .modal-body .three {
+  width: 100px;
+  display: inline-block;
+}
+.bg-none {
+  background: none;
+  border: none;
+}
+.index-box {
+  min-width: 1000px;
+  margin: 0 auto;
+}
+.index-box .index-nav-box {
+  background: #2a2a2b;
+}
+.index-box .index-nav-box .navbar-left .icon-tubiao210 {
+  font-size: 14px;
+  color: #fff;
+}
+.index-box .index-nav-box .navbar-left .btn-group {
+  margin-bottom: 0;
+}
+.index-box .index-nav-box .navbar-right .moreRen .icon-duoren,
+.index-box .index-nav-box .navbar-right .moreRen .num {
+  color: #fff;
+  font-size: 20px;
+}
+.index-box .index-nav-box .navbar-right .grzx .dropdown-toggle .icon-center,
+.index-box .index-nav-box .navbar-right .grzx .dropdown-toggle .caret {
+  color: #fff;
+  font-size: 30px;
+}
+.index-box .index-nav-box .navbar-right .logout .icon-tuichu {
+  color: #fe5455;
+}
+.index-box .index-con-box {
+  height: 100%;
+  width: 100%;
+  padding-top: 54px;
+  overflow: hidden;
+}
+.index-box .index-con-box .con-left,
+.index-box .index-con-box .con-tab,
+.index-box .index-con-box .con-cencer {
+  height: 100%;
+}
+.index-box .index-con-box .con-left {
+  background: #2a2a2b;
+  width: 54px;
+  position: fixed;
+  height: 100%;
+}
+.index-box .index-con-box .con-left .iconfont {
+  font-size: 18px;
+  color: #fff;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+.index-box .index-con-box .con-left .iconfont:hover {
+  background: red;
+}
+.index-box .index-con-box .con-left .active {
+  background: red;
+}
+.index-box .index-con-box .con-tab {
+  position: fixed;
+  width: 320px;
+  padding: 0;
+  left: 54px;
+  overflow-y: auto;
+  border-right: 1px solid #ccc;
+}
+.index-box .index-con-box .con-tab .nav {
+  position: fixed;
+  background: #fff;
+  width: 319px;
+  z-index: 10;
+}
+.index-box .index-con-box .con-tab .tab-content {
+  margin-top: 43px;
+}
+.index-box .index-con-box .con-tab .tab-content .tab-con {
+  display: none;
+}
+.index-box .index-con-box .con-tab .tab-content .active {
+  display: block;
+}
+.index-box .index-con-box .con-tab .tab-content .tab1 .lists {
+  width: 100%;
+  padding: 10px;
+  background: #f7f6f6;
+  cursor: pointer;
+}
+.index-box .index-con-box .con-tab .tab-content .tab1 .lists:hover {
+  background: #ececec;
+}
+.index-box .index-con-box .con-tab .tab-content .tab1 .lists .row .iconfont {
+  font-size: 16px;
+}
+.index-box .index-con-box .con-tab .tab-content .tab1 .lists .row .zuo-xi {
+  color: #999;
+}
+.index-box .index-con-box .con-tab .tab-content .tab1 .active {
+  background: #ececec;
+}
+.index-box .index-con-box .con-tab .tab-content .tab2 .search-box {
+  padding: 10px;
+}
+.index-box .index-con-box .con-tab .tab-content .tab2 .lists .row .lab-box {
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 12px;
+}
+.index-box .index-con-box .con-cencer {
+  width: 75%;
+  margin-left: 374px;
+}
+.index-box .index-con-box .con-cencer .form-horizontal {
+  padding: 20px;
+}
+.index-box .index-con-box .con-cencer .form-horizontal .row .form-group .control-label {
+  width: 100px;
+}
+.index-box .index-con-box .con-cencer .form-horizontal .row .lab {
+  padding-right: 0;
+}
+.index-box .index-con-box .con-cencer .form-horizontal .row .val {
+  padding-left: 0;
+}
+.index-box .index-con-box .con-cencer .form-horizontal .btn-box {
+  width: 100px;
+  text-align: right;
+  padding-right: 30px;
+}
+.index-box .index-con-box .con-cencer .panel {
+  margin-left: 20px;
+}
+.index-box .index-con-box .con-cencer .panel table.tab-scorll {
+  overflow-y: auto;
+  min-height: 400px;
+  display: block;
+}

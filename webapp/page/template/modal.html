@@ -1,0 +1,110 @@
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span
+                        class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="myModalLabel">高级搜索</h4>
+            </div>
+            <div class="modal-body">
+                <div class="form-horizontal">
+                    <div class="row">
+                        <div class="col-md-6 form-group">
+                            <label class="col-md-5 control-label">主叫</label>
+                            <div class="col-sm-7">
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-md-6 form-group">
+                            <label class="col-md-5 control-label">被叫</label>
+                            <div class="col-sm-7">
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 form-group">
+                            <label class="col-md-5 control-label">呼叫类型</label>
+                            <div class="col-sm-7">
+                                <select class="form-control"></select>
+                            </div>
+                        </div>
+                        <div class="col-md-6 form-group">
+                            <label class="col-md-5 control-label">坐席</label>
+                            <div class="col-sm-7">
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 form-group">
+                            <label class="col-md-5 control-label">分机号</label>
+                            <div class="col-sm-7">
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-md-6 form-group">
+                            <label class="col-md-5 control-label">是否接听</label>
+                            <div class="col-sm-7">
+                                <select class="form-control"></select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-md-12">
+                            <label class="col-md-3 control-label">来电原因</label>
+                            <div class="col-md-8" id="con-select">
+                                <select class="form-control one ">
+
+                                </select>
+                                <select class="form-control two ">
+
+                                </select>
+                                <select class="form-control three ">
+
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-md-10">
+                            <label class="col-md-4 control-label">来电时间</label>
+                            <div class="col-md-8">
+                                <div class="input-group input-daterange">
+                                    <input type="text" class="form-control datetimepicker" name="start"
+                                           data-date-format="yyyy-mm-dd hh:ii">
+                                    <span class="input-group-addon">to</span>
+                                    <input type="text" class="form-control datetimepicker" name="end"
+                                           data-date-format="yyyy-mm-dd hh:ii">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-md-12">
+                            <label class="col-md-4 control-label">通话时长</label>
+                            <div class="col-md-8">
+                                <div class="input-group input-daterange">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control">
+                                        <span class="input-group-addon">秒</span>
+                                    </div>
+                                    <span class="input-group-addon bg-none">到</span>
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" >
+                                        <span class="input-group-addon">秒</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-warning" data-dismiss="modal">重置</button>
+                <button class="btn btn-success">搜索</button>
+            </div>
+        </div>
+    </div>
+</div>

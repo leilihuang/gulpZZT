@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../css/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/bootstrap/bootstrap-select.min.css">
+    <link rel="stylesheet" href="../css/bootstrap/datetimepicker.css">
+    <!-- build:css css/index.min.css-->
+    <link rel="stylesheet" href="../css/iconfont/iconfont.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <!-- endbuild-->
+    <title>首页</title>
+</head>
+<body>
+<div class="index-box">
+    <!--顶部navbar导航-->
+    <div class="index-nav-box navbar-fixed-top clearfix">
+        <div class="navbar-form navbar-left" role="search">
+            <div class="btn-group">
+                <div class="col-md-12">
+                    <select id="statePhone" class="form-control selectpicker" style="display: none;">
+                        <option value="0">空闲</option>
+                        <option value="1">忙碌</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Search">
+            </div>
+            <button class="btn btn-primary">
+                <i class="iconfont icon-tubiao210"></i>
+            </button>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li role="presentation" class="moreRen">
+                    <a href="">
+                        <i class="iconfont icon-duoren"></i>
+                        <span class="badge">42</span>
+                    </a>
+                </li>
+                <li class="dropdown grzx">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <i class="iconfont icon-center"></i><span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="#">个人中心</a></li>
+                    </ul>
+                </li>
+                <li class="logout">
+                    <a href="">
+                        <i class="iconfont icon-tuichu"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!--下面内容模块-->
+    <div class="index-con-box clearfix">
+        <!--左侧菜单-->
+        <div id="sidebar-box" class="con-left sidebar pad-cur">
+            <!--<div data-index="0" class="icon-tubiao210 iconfont active"></div>-->
+            <!--<div data-index="1" class="icon-baobiao iconfont"></div>-->
+            <!--<div data-index="2" class="icon-icon iconfont"></div>-->
+            <!--<div data-index="3" class="icon-erji3 iconfont"></div>-->
+        </div>
+
+
+        <!--tab切换中间-->
+        <div id="tab-box" class="con-tab container">
+            <ul id="mayTab" class="nav nav-tabs" role="tablist">
+                <li role="presentation" class="active">
+                    <a data-tpl="tpl-tab1-box" data-toggle="tab" href="#newTh">当前通话</a>
+                </li>
+                <li role="presentation">
+                    <a data-tpl="tpl-tab2-box" data-toggle="tab" href="#myTh">我的通话</a>
+                </li>
+                <li role="presentation">
+                    <a data-tpl="tpl-tab3-box" data-toggle="tab" href="#hostory">来电历史</a>
+                </li>
+            </ul>
+            <div class="tab-content">
+                <div id="newTh" class="active tab-con tab1">
+                    <div class="list-box">
+
+                    </div>
+                </div>
+                <div id="myTh" class="tab-con tab1 tab2">
+                    <div class="row search-box">
+                        <div class="col-md-12">
+                            <div class="input-group">
+                                <div class="input-group-btn">
+                                    <select class="form-control selectpicker" style="display: none;">
+                                        <option value="0">全部</option>
+                                        <option value="1">已接听</option>
+                                        <option value="1">未接听</option>
+                                    </select>
+                                </div>
+                                <input placeholder="请输入主叫或者被叫" type="text" class="form-control">
+                                <div class="input-group-btn verticalTop">
+                                    <button class="btn btn-default" type="button" data-toggle="modal"
+                                            data-target="#myModal">
+                                        高级搜索
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="list-box">
+
+                    </div>
+                </div>
+                <div id="hostory" class="tab-con tab1 tab2 tab3">
+                    <div class="row search-box">
+                        <div class="col-md-12">
+                            <div class="input-group">
+                                <input placeholder="请输入主叫或者被叫" type="text" class="form-control">
+                                <div class="input-group-btn verticalTop">
+                                    <button class="btn btn-default" type="button" data-toggle="modal"
+                                            data-target="#myModal">
+                                        高级搜索
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="list-box">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--模态窗口-->
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span
+                        class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="myModalLabel">高级搜索</h4>
+            </div>
+            <div class="modal-body">
+                <div class="form-horizontal">
+                    <div class="row">
+                        <div class="col-md-6 form-group">
+                            <label class="col-md-5 control-label">主叫</label>
+                            <div class="col-sm-7">
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-md-6 form-group">
+                            <label class="col-md-5 control-label">被叫</label>
+                            <div class="col-sm-7">
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 form-group">
+                            <label class="col-md-5 control-label">呼叫类型</label>
+                            <div class="col-sm-7">
+                                <select class="form-control"></select>
+                            </div>
+                        </div>
+                        <div class="col-md-6 form-group">
+                            <label class="col-md-5 control-label">坐席</label>
+                            <div class="col-sm-7">
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 form-group">
+                            <label class="col-md-5 control-label">分机号</label>
+                            <div class="col-sm-7">
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-md-6 form-group">
+                            <label class="col-md-5 control-label">是否接听</label>
+                            <div class="col-sm-7">
+                                <select class="form-control"></select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-md-12">
+                            <label class="col-md-3 control-label">来电原因</label>
+                            <div class="col-md-8" id="con-select">
+                                <select class="form-control one ">
+
+                                </select>
+                                <select class="form-control two ">
+
+                                </select>
+                                <select class="form-control three ">
+
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-md-10">
+                            <label class="col-md-4 control-label">来电时间</label>
+                            <div class="col-md-8">
+                                <div class="input-group input-daterange">
+                                    <input type="text" class="form-control datetimepicker" name="start"
+                                           data-date-format="yyyy-mm-dd hh:ii">
+                                    <span class="input-group-addon">to</span>
+                                    <input type="text" class="form-control datetimepicker" name="end"
+                                           data-date-format="yyyy-mm-dd hh:ii">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-md-12">
+                            <label class="col-md-4 control-label">通话时长</label>
+                            <div class="col-md-8">
+                                <div class="input-group input-daterange">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control">
+                                        <span class="input-group-addon">秒</span>
+                                    </div>
+                                    <span class="input-group-addon bg-none">到</span>
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" >
+                                        <span class="input-group-addon">秒</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-warning" data-dismiss="modal">重置</button>
+                <button class="btn btn-success">搜索</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+        <!--////模态窗口-->
+        <!--右侧内容模块-->
+        <div id="content-box" class="con-cencer content container">
+
+        </div>
+    </div>
+</div>
+
+<div class="temp-box" style="display: none">
+    <!--sideMenu菜单-->
+<script type="text/html" id="tpl-side-menu">
+    {{each sideMenu as menu}}
+    <div data-index="{{menu.id}}" class="{{menu.icon}} iconfont"></div>
+    {{/each}}
+</script>
+<!--表格-->
+<script type="text/html" id="tpl-table-body">
+    {{each list as tab}}
+    <tr>
+        <td class="col-md-1">{{tab.id}}</td>
+        <td class="col-md-2">{{tab.zhujiao}}</td>
+        <td class="col-md-2">{{tab.time}}</td>
+        <td class="col-md-2">{{tab.phone}}</td>
+        <td class="col-md-2">{{tab.text}}</td>
+        <td class="col-md-3">{{tab.ramark}}</td>
+    </tr>
+    {{/each}}
+</script>
+<!---select下拉框-->
+<script type="text/html" id="tpl-level-box">
+    {{each list as opt}}
+    <option value="{{i}}">{{opt.name}}</option>
+    {{/each}}
+</script>
+<!--tab1列表-->
+<script type="text/html" id="tpl-tab1-box">
+    {{each lists as list i}}
+    <div data-info="tpl-tab1-info" data-index="{{i}}" class="lists ">
+        <div class="row">
+            <div class="col-md-6">{{list.phone}}</div>
+            <div class="col-md-6 text-right">{{list.time}}</div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">{{list.name}}</div>
+        </div>
+        <div class="row">
+            <div class="col-md-10 zuo-xi">
+                {{list.zuoxi}}[{{list.zuoxi}}]
+                <i class="iconfont icon-jiantouyou"></i> 坐席
+            </div>
+            <div class="col-md-2 text-right">
+                <i class="iconfont {{list.img}}"></i>
+            </div>
+        </div>
+    </div>
+    {{/each}}
+</script>
+<!--tab2列表-->
+<script type="text/html" id="tpl-tab2-box">
+    {{each lists as d}}
+    <div data-info="tpl-tab2-info" data-index="0" class="lists ">
+        <div class="row">
+            <div class="col-md-6">{{d.phone}}</div>
+            <div class="col-md-6 text-right">{{d.time}}</div>
+        </div>
+        <div class="row mar-top">
+            <div class="col-md-7 zuo-xi">
+                <i class="iconfont {{d.img}}"></i>
+                {{d.zuoxi}}[{{d.zuoxi}}]
+            </div>
+            <div class="col-md-5 text-right">
+                <i class="btn-danger lab-box">振铃未接听</i>
+            </div>
+        </div>
+    </div>
+    {{/each}}
+</script>
+<!--tab3列表-->
+<script type="text/html" id="tpl-tab3-box"></script>
+<!--tab1列表详细内容-->
+<script type="text/html" id="tpl-tab1-info">
+    <div class="form-horizontal">
+        <div class="row han">
+            <div class="col-md-4 form-group">
+                <label class="col-md-5 control-label">呼叫类型</label>
+                <div class="col-sm-7">
+                    <input type="text" class="form-control" placeholder="来电" disabled="">
+                </div>
+            </div>
+            <div class="col-md-4 form-group">
+                <label class="col-md-5 control-label">主叫</label>
+                <div class="col-sm-7">
+                    <input type="text" class="form-control" placeholder="18802789980" disabled="">
+                </div>
+            </div>
+            <div class="col-md-4 form-group">
+                <label class="col-md-5 control-label">被叫</label>
+                <div class="col-sm-7">
+                    <input type="text" class="form-control" placeholder="18802789980" disabled="">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 form-group">
+                <label class="col-md-5 control-label">来电时间</label>
+                <div class="col-sm-7">
+                    <input type="text" class="form-control" placeholder="21:49:48" disabled="">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group col-md-12">
+                <label class="col-md-2 control-label">来电原因</label>
+                <div class="col-md-10 " id="con-select">
+                    <select class="form-control one ">
+
+                    </select>
+                    <select class="form-control two ">
+
+                    </select>
+                    <select class="form-control three ">
+
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 form-group">
+                <label class="col-md-3 control-label">来电时间</label>
+                <div class="col-md-8">
+                    <textarea class="col-md-8 form-control" placeholder="Textarea" rows="5"></textarea>
+                </div>
+            </div>
+        </div>
+        <div class="btn-box">
+            <button type="button" class="btn btn-success">保存</button>
+        </div>
+    </div>
+    {{if type == 0}}
+    <div class="panel panel-inverse" data-sortable-id="table-basic-2">
+        <div class="page-header">
+            <h3>历史来电记录</h3>
+        </div>
+        <div class="panel-body">
+            <table class="table table-hover">
+                <thead>
+                <tr>
+                    <th></th>
+                    <th>主叫</th>
+                    <th>来电时间</th>
+                    <th>处理坐席</th>
+                    <th>来电原因</th>
+                    <th>备注内容</th>
+                </tr>
+                </thead>
+                <tbody id="table-body">
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+    {{/if}}
+</script>
+<!--tab2列表详细内容-->
+<script type="text/html" id="tpl-tab2-info">
+    <div class="form-horizontal">
+        <div class="row han">
+            <div class="col-md-4 form-group">
+                <label class="col-md-5 control-label">呼叫类型</label>
+                <div class="col-sm-7">
+                    <input type="text" class="form-control" placeholder="来电" disabled="">
+                </div>
+            </div>
+            <div class="col-md-4 form-group">
+                <label class="col-md-5 control-label">主叫</label>
+                <div class="col-sm-7">
+                    <input type="text" class="form-control" placeholder="18802789980" disabled="">
+                </div>
+            </div>
+            <div class="col-md-4 form-group">
+                <label class="col-md-5 control-label">来电时间</label>
+                <div class="col-sm-7">
+                    <input type="text" class="form-control" placeholder="21:49:48" disabled="">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 form-group">
+                <label class="col-md-5 control-label">接通时间</label>
+                <div class="col-sm-7">
+                    <input type="text" class="form-control" placeholder="21:49:48" disabled="">
+                </div>
+            </div>
+            <div class="col-md-4 form-group">
+                <label class="col-md-5 control-label">处理坐席</label>
+                <div class="col-sm-7">
+                    <input type="text" class="form-control" placeholder="张三" disabled="">
+                </div>
+            </div>
+            <div class="col-md-4 form-group">
+                <label class="col-md-5 control-label">所属技能组</label>
+                <div class="col-sm-7">
+                    <input type="text" class="form-control" placeholder="24106" disabled="">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 form-group">
+                <label class="col-md-5 control-label">工号</label>
+                <div class="col-sm-7">
+                    <input type="text" class="form-control" placeholder="14453" disabled="">
+                </div>
+            </div>
+            <div class="form-group col-md-8">
+                <label class="col-md-2 control-label">来电原因</label>
+                <div class="col-md-10 " id="con-select">
+                    <input type="text" class="form-control" placeholder="来电原因" disabled="">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 form-group">
+                <label class="col-md-3 control-label">备注内容</label>
+                <div class="col-md-8">
+                    <textarea class="col-md-8 form-control" placeholder="Textarea" rows="5" disabled>没有什么</textarea>
+                </div>
+            </div>
+        </div>
+    </div>
+</script>
+<!--tab3列表详细内容-->
+<script type="text/html" id="tpl-tab3-info">
+
+</script>
+</div>
+
+<!--build:js js/lib.min.js-->
+<script type="text/javascript" src="../js/lib/jquery.min.js"></script>
+<script type="text/javascript" src="../js/lib/bootstrap.min.js"></script>
+<script type="text/javascript" src="../js/lib/bootstrap-select.min.js"></script>
+<script type="text/javascript" src="../js/lib/bootstrap-datetimepicker.min.js"></script>
+<script type="text/javascript" src="../js/lib/template.js"></script>
+<script type="text/javascript" src="../js/lib/bootstrap-datetimepicker.zh-CN.js"></script>
+<!--endbuild-->
+<script type="text/javascript" src="../js/lib/mock.js"></script>
+<script type="text/javascript" src="../js/mock/mockData.js"></script>
+<!--build:js js/index.min.js-->
+<script type="text/javascript" src="../js/logic/index.js"></script>
+<!--endbuild-->
+
+</body>
+</html>

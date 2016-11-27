@@ -1,0 +1,121 @@
+.bor-bottom {
+  border-bottom: 1px solid #ccc;
+}
+.phone-success {
+  color: #23d026;
+}
+.phone-warning {
+  color: #f0ad4e;
+}
+.overHide {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.one,
+.two,
+.three {
+  width: 150px;
+  display: inline-block;
+}
+textarea {
+  resize: none;
+}
+.mar-top {
+  margin-top: 20px;
+}
+.btn-group {
+  margin-bottom: 0;
+}
+.verticalTop {
+  vertical-align: top;
+}
+.control-label {
+  width: 100px;
+}
+.modal .modal-body .one,
+.modal .modal-body .two,
+.modal .modal-body .three {
+  width: 100px;
+  display: inline-block;
+}
+.bg-none {
+  background: none;
+  border: none;
+}
+body {
+  background: #3c4f68;
+}
+.login-box {
+  min-width: 1000px;
+  margin: 0 auto;
+}
+.login-box .login-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 600px;
+  height: 400px;
+  margin: auto;
+  background: #ffffff;
+}
+.login-box .login-content .logo {
+  position: absolute;
+  top: 30px;
+  left: 0;
+  width: 100%;
+}
+.login-box .login-content .log-Form {
+  height: 100%;
+}
+.login-box .login-content .log-Form .log-rig,
+.login-box .login-content .log-Form .log-left {
+  float: left;
+  height: 100%;
+  padding: 100px 20px 0;
+}
+.login-box .login-content .log-Form .log-left {
+  width: 300px;
+  background-color: #eff2f9;
+}
+.login-box .login-content .log-Form .log-left .tit {
+  font-size: 24px;
+  padding: 20px 0;
+  border-bottom: 1px solid #ccc;
+}
+.login-box .login-content .log-Form .log-left .con {
+  margin-top: 30px;
+}
+.login-box .login-content .log-Form .log-left .con .con-lab,
+.login-box .login-content .log-Form .log-left .con .tit-left {
+  float: left;
+}
+.login-box .login-content .log-Form .log-left .con .con-lab {
+  font-size: 20px;
+  line-height: 50px;
+}
+.login-box .login-content .log-Form .log-left .con .tit-left {
+  padding-left: 10px;
+}
+.login-box .login-content .log-Form .log-rig {
+  width: 300px;
+}
+.login-box .login-content .log-Form .log-rig .form .checkbox .loginType-box {
+  float: right;
+}
+.login-box .login-content .log-Form .log-rig .form .checkbox .loginType-box .icon-yuan {
+  font-size: 14px;
+  color: red;
+}
+.login-box .login-content .log-Form .log-rig .btn-box {
+  text-align: center;
+  padding: 0 20px;
+  margin-top: 20px;
+}
+.login-box .login-content .log-Form .log-rig .btn-box .submitBtn {
+  background: #102332;
+  color: #fff;
+  width: 100%;
+}

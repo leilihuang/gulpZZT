@@ -1,0 +1,79 @@
+@import "lib/util";
+body{
+  background: @loginBackground;
+}
+.login-box{
+  min-width:1000px;
+  margin:0 auto;
+  .login-content{
+    position:absolute;
+    top:0;
+    left:0;
+    bottom:0;
+    right:0;
+    width:600px;
+    height:400px;
+    margin:auto;
+    background: #ffffff;
+    .logo{
+      position:absolute;
+      top:30px;
+      left:0;
+      width:100%;
+    }
+    .log-Form{
+      height:100%;
+      .log-rig,.log-left{
+        float:left;
+        height:100%;
+        padding:100px 20px 0;
+      }
+      .log-left{
+        width:300px;
+        background-color: #eff2f9;
+        .tit{
+          font-size:24px;
+          padding:20px 0;
+          border-bottom: 1px solid @bor-bottom;
+        }
+        .con{
+          margin-top:30px;
+          .con-lab,.tit-left{
+            float:left;
+          }
+          .con-lab{
+            font-size:20px;
+            line-height: 50px;
+          }
+          .tit-left{
+            padding-left:10px;
+          }
+        }
+      }
+      .log-rig{
+        width:300px;
+        .form{
+          .checkbox{
+            .loginType-box{
+              float:right;
+              .icon-yuan{
+                font-size:14px;
+                color:@loginType;
+              }
+            }
+          }
+        }
+        .btn-box{
+          text-align: center;
+          padding: 0 20px;
+          margin-top:20px;
+          .submitBtn{
+            background: @loginSubBtn;
+            color:#fff;
+            width:100%;
+          }
+        }
+      }
+    }
+  }
+}

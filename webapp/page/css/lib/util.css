@@ -1,0 +1,45 @@
+.bor-bottom {
+  border-bottom: 1px solid #ccc;
+}
+.phone-success {
+  color: #23d026;
+}
+.phone-warning {
+  color: #f0ad4e;
+}
+.overHide {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.one,
+.two,
+.three {
+  width: 150px;
+  display: inline-block;
+}
+textarea {
+  resize: none;
+}
+.mar-top {
+  margin-top: 20px;
+}
+.btn-group {
+  margin-bottom: 0;
+}
+.verticalTop {
+  vertical-align: top;
+}
+.control-label {
+  width: 100px;
+}
+.modal .modal-body .one,
+.modal .modal-body .two,
+.modal .modal-body .three {
+  width: 100px;
+  display: inline-block;
+}
+.bg-none {
+  background: none;
+  border: none;
+}

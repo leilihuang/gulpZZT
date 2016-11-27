@@ -1,0 +1,182 @@
+
+@font-face {font-family: "iconfont";
+  src: url('iconfont.eot?t=1479735773385'); /* IE9*/
+  src: url('iconfont.eot?t=1479735773385#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('iconfont.woff?t=1479735773385') format('woff'), /* chrome, firefox */
+  url('iconfont.ttf?t=1479735773385') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('iconfont.svg?t=1479735773385#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.iconfont {
+  font-family:"iconfont" !important;
+  font-size:16px;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-diannao:before { content: "\e600"; }
+
+.icon-tuichu:before { content: "\e601"; }
+
+.icon-center:before { content: "\e611"; }
+
+.icon-5dianhuazhuanbo:before { content: "\e643"; }
+
+.icon-tubiao210:before { content: "\e61b"; }
+
+.icon-erji3:before { content: "\e669"; }
+
+.icon-yibo:before { content: "\e61e"; }
+
+.icon-duoren:before { content: "\e66d"; }
+
+.icon-icon:before { content: "\e654"; }
+
+.icon-yuan:before { content: "\e742"; }
+
+.icon-baobiao:before { content: "\e60e"; }
+
+.icon-bochudianhua1:before { content: "\e618"; }
+
+.icon-laidian:before { content: "\e665"; }
+
+.icon-laidian1:before { content: "\e605"; }
+
+.icon-jiantouyou:before { content: "\e6bd"; }
+
+
+.bor-bottom {
+  border-bottom: 1px solid #ccc;
+}
+.phone-success {
+  color: #23d026;
+}
+.phone-warning {
+  color: #f0ad4e;
+}
+.overHide {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.one,
+.two,
+.three {
+  width: 200px;
+  display: inline-block;
+}
+textarea {
+  resize: none;
+}
+.index-box {
+  min-width: 1000px;
+  margin: 0 auto;
+}
+.index-box .index-nav-box {
+  background: #2a2a2b;
+}
+.index-box .index-nav-box .navbar-left .icon-tubiao210 {
+  font-size: 14px;
+  color: #fff;
+}
+.index-box .index-nav-box .navbar-right .moreRen .icon-duoren,
+.index-box .index-nav-box .navbar-right .moreRen .num {
+  color: #fff;
+  font-size: 20px;
+}
+.index-box .index-nav-box .navbar-right .grzx .dropdown-toggle .icon-center,
+.index-box .index-nav-box .navbar-right .grzx .dropdown-toggle .caret {
+  color: #fff;
+  font-size: 30px;
+}
+.index-box .index-nav-box .navbar-right .logout .icon-tuichu {
+  color: #fe5455;
+}
+.index-box .index-con-box {
+  height: 100%;
+  width: 100%;
+  padding-top: 54px;
+  overflow: hidden;
+}
+.index-box .index-con-box .con-left,
+.index-box .index-con-box .con-tab,
+.index-box .index-con-box .con-cencer {
+  height: 100%;
+  float: left;
+  margin-bottom: -10000px;
+  padding-bottom: 10000px;
+}
+.index-box .index-con-box .con-left {
+  background: #2a2a2b;
+  width: 5%;
+}
+.index-box .index-con-box .con-left .iconfont {
+  font-size: 18px;
+  color: #fff;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+.index-box .index-con-box .con-left .iconfont:hover {
+  background: red;
+}
+.index-box .index-con-box .con-left .active {
+  background: red;
+}
+.index-box .index-con-box .con-tab {
+  width: 20%;
+  border-right: 1px solid #ccc;
+}
+.index-box .index-con-box .con-tab .tab-content .tab-con {
+  display: none;
+}
+.index-box .index-con-box .con-tab .tab-content .active {
+  display: block;
+}
+.index-box .index-con-box .con-tab .tab-content .tab1 .list-box .lists {
+  width: 100%;
+  padding: 10px;
+  background: #f7f6f6;
+  cursor: pointer;
+}
+.index-box .index-con-box .con-tab .tab-content .tab1 .list-box .lists:hover {
+  background: #ececec;
+}
+.index-box .index-con-box .con-tab .tab-content .tab1 .list-box .lists .row .iconfont {
+  font-size: 16px;
+}
+.index-box .index-con-box .con-tab .tab-content .tab1 .list-box .lists .row .zuo-xi {
+  color: #999;
+}
+.index-box .index-con-box .con-tab .tab-content .tab1 .list-box .active {
+  background: #ececec;
+}
+.index-box .index-con-box .con-cencer {
+  width: 75%;
+}
+.index-box .index-con-box .con-cencer .form-horizontal {
+  padding: 20px;
+}
+.index-box .index-con-box .con-cencer .form-horizontal .row .form-group .control-label {
+  width: 100px;
+}
+.index-box .index-con-box .con-cencer .form-horizontal .row .lab {
+  padding-right: 0;
+}
+.index-box .index-con-box .con-cencer .form-horizontal .row .val {
+  padding-left: 0;
+}
+.index-box .index-con-box .con-cencer .form-horizontal .btn-box {
+  width: 100px;
+  text-align: right;
+  padding-right: 30px;
+}
+.index-box .index-con-box .con-cencer .panel {
+  margin-left: 20px;
+}
+.index-box .index-con-box .con-cencer .panel table.tab-scorll {
+  overflow-y: auto;
+  min-height: 400px;
+  display: block;
+}

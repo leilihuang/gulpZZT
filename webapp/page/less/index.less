@@ -1,0 +1,167 @@
+@import "lib/util";
+
+
+
+.index-box{
+  min-width:1000px;
+  margin:0 auto;
+  .index-nav-box{
+    background: @navBar;
+    .navbar-left{
+      .icon-tubiao210{
+        font-size:14px;
+        color:#fff;
+      }
+      .btn-group{
+        margin-bottom: 0;
+      }
+    }
+    .navbar-collapse{
+
+    }
+    .navbar-right{
+      .moreRen{
+        .icon-duoren,.num{
+          color:#fff;
+          font-size:20px;
+        }
+      }
+      .grzx{
+        .dropdown-toggle{
+          .icon-center,.caret{
+            color:#fff;
+            font-size:30px;
+          }
+        }
+      }
+      .logout{
+        .icon-tuichu{
+          color:#fe5455;
+        }
+      }
+
+    }
+  }
+  .index-con-box{
+    height: 100%;
+    width: 100%;
+    padding-top: 54px;
+    overflow: hidden;
+    .con-left,.con-tab,.con-cencer{
+      height:100%;
+    }
+    .con-left{
+      background: @navBar;
+      width:54px;
+      position:fixed;
+      height:100%;
+      .iconfont{
+        font-size:18px;
+        color:@menuColor;
+        padding:10px 20px;
+        cursor:pointer;
+        &:hover{
+          background: @menuCur;
+        }
+      }
+      .active{
+        background: @menuCur;
+      }
+    }
+    .con-tab{
+      position:fixed;
+      width:320px;
+      padding:0;
+      left:54px;
+      overflow-y: auto;
+      border-right:1px solid @bor-bottom;
+      .nav{
+        position: fixed;
+        background: #fff;
+        width: 319px;
+        z-index: 10;
+      }
+      .tab-content{
+        margin-top:43px;
+        .tab-con{
+          display: none;
+        }
+        .active{
+          display: block;
+        }
+        .tab1{
+          .lists{
+            width:100%;
+            padding: 10px;
+            background: rgb(247, 246, 246);
+            cursor:pointer;
+            &:hover{
+              background: #ececec;
+            }
+            .row{
+              .iconfont{
+                font-size:16px;
+              }
+              .zuo-xi{
+                color:#999;
+              }
+            }
+          }
+          .active{
+            background: #ececec;
+          }
+        }
+        .tab2{
+          .search-box{
+            padding:10px;
+          }
+          .lists{
+            .row{
+              .lab-box{
+                padding:5px;
+                border-radius:5px;
+                font-size:12px;
+              }
+            }
+          }
+        }
+        .tab3{
+
+        }
+      }
+    }
+    .con-cencer{
+      width:75%;
+      margin-left:374px;
+      .form-horizontal{
+        padding:20px;
+        .row{
+          .form-group{
+            .control-label{
+              width: 100px;
+            }
+          }
+          .lab{
+            padding-right: 0;
+          }
+          .val{
+            padding-left: 0;
+          }
+        }
+        .btn-box{
+          width: 100px;
+          text-align: right;
+          padding-right:30px;
+        }
+      }
+      .panel{
+        margin-left:20px;
+        table.tab-scorll{
+          overflow-y: auto;
+          min-height: 400px;
+          display: block;
+        }
+      }
+    }
+  }
+}
