@@ -1,61 +1,62 @@
 $(function () {
 	var util = {
-		ajax:function (url,callback,data,type) {
+		ajax: function (url, callback, data, type) {
 			$.ajax({
-				url:url,
-				type:type || 'GET',
-				dataType:'json',
-				data:data || {},
-				success:function(d){
+				url: url,
+				type: type || 'GET',
+				dataType: 'json',
+				data: data || {},
+				success: function (d) {
 					callback(d);
 				},
-				error:function(error){
+				error: function (error) {
 
 				}
 			})
 		},
-		level3:function ($dom) {
-			$dom.on('change',function () {
+		level3: function ($dom) {
+			$dom.on('change', function () {
 				var next = $(this).next();
-				util.ajax('/getOption.json',function (d) {
-					next.empty().append(template('tpl-level-box',d));
+				util.ajax('/getOption.json', function (d) {
+					next.empty().append(template('tpl-level-box', d));
 				});
 			});
 		},
-		hoverBind:function ($dom,callback) {
-			$dom.on('click',function () {
+		hoverBind: function ($dom, callback) {
+			$dom.on('click', function () {
 				$(this).addClass('active').siblings('.active').removeClass('active');
 				callback($(this));
 			});
 		},
-		divSelect:function (cls) {
+		divSelect: function (cls) {
 			$('.selectpicker').selectpicker({
 				style: cls || '',
 				size: 4
 			});
 		},
-		datePicker:function () {
+		datePicker: function () {
 			$('.datetimepicker').datetimepicker({
 				format: 'yyyy-mm-dd hh:ii'
 			});
 		}
 	};
+
 	var nav = {
-		init:function () {
+		init: function () {
 			this.eventBind();
 			util.divSelect('btn-success');
 		},
-		eventBind:function () {
+		eventBind: function () {
 			this.selectToggle();
 		},
-		selectToggle:function () {
+		selectToggle: function () {
 			// $('.dropdown-toggle').dropdown();
-			$('#statePhone').on('change',function () {
+			$('#statePhone').on('change', function () {
 				var val = $(this).val(),
 					$divSel = $(this).next('.bootstrap-select').find('button');
-				if(val == 0){
+				if (val == 0) {
 					$divSel.addClass('btn-success').removeClass('btn-warning');
-				}else{
+				} else {
 					$divSel.addClass('btn-warning').removeClass('btn-success');
 				}
 			})
@@ -63,41 +64,41 @@ $(function () {
 	};
 
 	var menu = {
-		menus:[{
-			icon:'icon-tubiao210 active'
-		},{
-			icon:'icon-baobiao'
-		},{
-			icon:'icon-icon'
-		},{
-			icon:'icon-erji3'
+		menus: [{
+			icon: 'icon-tubiao210 active'
+		}, {
+			icon: 'icon-baobiao'
+		}, {
+			icon: 'icon-icon'
+		}, {
+			icon: 'icon-erji3'
 		}],
-		init:function () {
+		init: function () {
 			this.initMenu();
 			this.eventBind();
 		},
-		initMenu:function () {
-			$('#sidebar-box').empty().append(template('tpl-side-menu',{sideMenu:this.menus}));
+		initMenu: function () {
+			$('#sidebar-box').empty().append(template('tpl-side-menu', {sideMenu: this.menus}));
 		},
-		eventBind:function () {
+		eventBind: function () {
 			this.tabBind();
 			this.sideMenu();
 		},
-		tabBind:function () {
-			$('#mayTab').find('a').on('click',function (e) {
+		tabBind: function () {
+			$('#mayTab').find('a').on('click', function (e) {
 				e.preventDefault();
 				$(this).tab('show');
 				var id = $(this).attr('href'),
 					tpl = $(this).attr('data-tpl');
-				content.listBind($(id),tpl);
+				content.listBind($(id), tpl);
 			})
 		},
-		sideMenu:function () {
-			util.hoverBind($('#sidebar-box').find('.iconfont'),function ($this) {
+		sideMenu: function () {
+			util.hoverBind($('#sidebar-box').find('.iconfont'), function ($this) {
 				var index = $this.attr('data-index');
-				if(index == 0){
+				if (index == 0) {
 
-				}else {
+				} else {
 
 				}
 			});
@@ -105,36 +106,40 @@ $(function () {
 	};
 
 	var content = {
-		init:function () {
+		init: function () {
 			this.eventBind();
 			util.datePicker();
 		},
-		eventBind:function () {
-			this.listBind($('#newTh'),'tpl-tab1-box');
+		eventBind: function () {
+			this.listBind($('#newTh'), 'tpl-tab1-box');
 		},
-		getTabel:function(){
-			util.ajax('/getTable.json',function (d) {
-				$('#table-body').empty().html(template('tpl-table-body',d));
+		getTabel: function () {
+			util.ajax('/getTable.json', function (d) {
+				$('#table-body').empty().html(template('tpl-table-body', d));
 			})
 		},
-		levelBind:function () {
+		levelBind: function () {
 			var $one = $('#con-select').find('.one'),
 				$two = $('#con-select').find('.two'),
 				$three = $('#con-select').find('.three');
-			util.ajax('/getOption.json',function (d) {
-				$one.empty().append(template('tpl-level-box',d));
+			util.ajax('/getOption.json', function (d) {
+				$one.empty().append(template('tpl-level-box', d));
 			});
 			util.level3($one);
 			util.level3($two);
 		},
-		listBind:function ($listBox,tpl) {
-			util.ajax('/getTab1.json',function (d) {
-				$listBox.find('.list-box').empty().append(template(tpl,d));
+		listBind: function ($listBox, tpl) {
+			util.ajax('/getTab1.json', function (d) {
+				//tpl-tab1-box
+				console.log('tab1==', d);
+				console.log('template===', template(tpl, d));
+				$listBox.find('.list-box').empty().append(template(tpl, d));
+
 				var $lists = $listBox.find('.list-box').find('.lists');
-				util.hoverBind($lists,function ($this) {
+				util.hoverBind($lists, function ($this) {
 					var id = $this.attr('data-index'),
 						tplInfo = $this.attr('data-info');
-					$('#content-box').empty().append(template(tplInfo,{type:id}));
+					$('#content-box').empty().append(template(tplInfo, {type: id}));
 					this.levelBind();
 					this.getTabel();
 				}.bind(this));
@@ -147,3 +152,19 @@ $(function () {
 	content.init();
 
 });
+
+function makeClosures(arr, fn) {
+	var arrs = [];
+	for (var i = 0; i < arr.length; i++) {
+		arrs[i] = (function (num) {
+			return fn.bind(null, num)
+		})(arr[i]);
+	}
+	return arrs;
+}
+var arr = [1, 2, 3];
+var square = function (x) {
+	return x * x;
+};
+var funcs = makeClosures(arr, square);
+funcs[1]();

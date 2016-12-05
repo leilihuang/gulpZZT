@@ -2,10 +2,10 @@
 <html>
 <head>
     <meta charset="UTF-8">
+    <!-- build:css css/index.min.css-->
     <link rel="stylesheet" href="../css/bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="../css/bootstrap/bootstrap-select.min.css">
     <link rel="stylesheet" href="../css/bootstrap/datetimepicker.css">
-    <!-- build:css css/index.min.css-->
     <link rel="stylesheet" href="../css/iconfont/iconfont.css">
     <link rel="stylesheet" href="../css/index.css">
     <!-- endbuild-->
@@ -45,6 +45,7 @@
                     </a>
                     <ul class="dropdown-menu" role="menu">
                         <li><a href="#">个人中心</a></li>
+                        <li><a href="#">个人中心22</a></li>
                     </ul>
                 </li>
                 <li class="logout">
@@ -132,7 +133,7 @@
             </div>
         </div>
         <!--模态窗口-->
-        @@include('../template/modal.html')
+        @@include('./template/modal.html')
         <!--////模态窗口-->
         <!--右侧内容模块-->
         <div id="content-box" class="con-cencer content container">
@@ -142,7 +143,7 @@
 </div>
 
 <div class="temp-box" style="display: none">
-    @@include('../template/utilTemplate.html')
+    @@include('./template/utilTemplate.html')
 </div>
 
 <!--build:js js/lib.min.js-->
@@ -153,8 +154,13 @@
 <script type="text/javascript" src="../js/lib/template.js"></script>
 <script type="text/javascript" src="../js/lib/bootstrap-datetimepicker.zh-CN.js"></script>
 <!--endbuild-->
+
+
+<!--build:js mock/test.js-->
 <script type="text/javascript" src="../js/lib/mock.js"></script>
 <script type="text/javascript" src="../js/mock/mockData.js"></script>
+<!--endbuild-->
+
 <!--build:js js/index.min.js-->
 <script type="text/javascript" src="../js/logic/index.js"></script>
 <!--endbuild-->

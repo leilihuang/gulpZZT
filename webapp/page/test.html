@@ -1,33 +1,42 @@
 <!DOCTYPE html>
 <html>
-<head lang="en">
-    <meta charset="UTF-8">
-    <title></title>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>开发平台</title>
+    <meta name="description" content="选择账号类型">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- build:css css/index.css-->
+    <!-- inject:css-->
+    <!-- endinject-->
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/test.css">
+    <!-- endbuild-->
 </head>
 <body>
+<!--公用头部-->
+ @@include('../headFoot/head.html')
+<!--公用头部-->
 
-<div>
-    <button>btn1</button>
-     
-    <button>btn2</button>
-     
-    <button>btn3</button>
-     
-    <button>btn4</button>
+<div class="contentBox">
+
 </div>
 
-<div class="notMe">div class="notMe"</div>
-<div class="myClass">div class="myClass"</div>
-<span class="myClass">span class="myClass"</span>
-
+<!--公用尾部-->
+    @@include('../headFoot/foot.html')
+<!--公用尾部-->
 
 <!--build:js js/lib.js-->
-<script type="text/javascript" src="../lib/jquery.min.js"></script>
-<script type="text/javascript" src="../lib/icheck.min.js"></script>
+<script type="text/javascript" src="../js/lib/jquery.min.js"></script>
+<script type="text/javascript" src="../js/lib/icheck.min.js"></script>
 <!--endbuild-->
 
-<!--build:js js/login.js-->
-<script type="text/javascript" src="../js/test.js"></script>
+<!--build:js js/index.js-->
+
+<!--inject:js-->
+<!--endinject-->
+
+<script type="text/javascript" src="../js/logic/login.js"></script>
 <!--endbuild-->
 </body>
 </html>

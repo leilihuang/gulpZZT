@@ -2,7 +2,8 @@ var Random = Mock.Random;
 
 //表格
 Mock.mock(/\/getTable\.json/,{
-	'list|10':[{
+	"success|1":true,
+		'list|10':[{
 		'id|+1':0,
 		'zhujiao|+1':2222,
 		'time':'@datetime',
@@ -14,7 +15,7 @@ Mock.mock(/\/getTable\.json/,{
 
 //三级联动
 Mock.mock(/\/getOption\.json/,{
-	'list|10':[{
+	'list|1-10':[{
 		'value|+1':0,
 		'name':'@name'
 	}]

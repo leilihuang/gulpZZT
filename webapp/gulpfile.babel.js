@@ -9,10 +9,11 @@ import config from './config.babel.js';
 const $ = plugins();
 
 const entryPaths = {
-	html: './page/html/**/*.html',
+	html: './page/html/*.html',
 	js: './page/js/logic/**/*.js',
 	css: './page/less/**/*.less',
-	img: './page/img/**/*.*'
+	img: './page/img/**/*.*',
+	template:'./page/temporary/*.html'
 };
 
 const outputPaths = {
@@ -32,16 +33,16 @@ gulp.task('less', () => {
 		}))
 });
 
-gulp.task('img:headFoot', () => {
-	const images = config.headFoot.map(component => {
-		return `${component}/img/**/*.*`;
-	});
+// gulp.task('img:headFoot', () => {
+// 	const images = config.headFoot.map(component => {
+// 		return `${component}/img/**/*.*`;
+// 	});
+//
+// 	return gulp.src(images)
+// 		.pipe(gulp.dest('./dev/img'));
+// });
 
-	return gulp.src(images)
-		.pipe(gulp.dest('./dev/img'));
-});
-
-gulp.task('img', ['img:headFoot'], () => {
+gulp.task('img', () => {
 	return gulp.src(entryPaths.img)
 		.pipe(gulp.dest('./dev/img'));
 });
@@ -51,10 +52,10 @@ gulp.task('html:headFoot', ['img'], () => {
 	const utilSrcs = [];
 	let task = gulp.src(entryPaths.html);
 
-	for (let utilSrc of config.headFoot) {
-		utilSrcs.push(`${utilSrc}/**/*.css`);
-		utilSrcs.push(`${utilSrc}/**/*.js`);
-	}
+	// for (let utilSrc of config.headFoot) {
+	// 	utilSrcs.push(`${utilSrc}/**/*.css`);
+	// 	utilSrcs.push(`${utilSrc}/**/*.js`);
+	// }
 
 	return task.pipe($.inject(gulp.src(utilSrcs, {read: false}), {relative: true}))
 		.pipe($.fileInclude({
@@ -65,7 +66,7 @@ gulp.task('html:headFoot', ['img'], () => {
 });
 
 gulp.task('html:build', ['less', 'html:headFoot'], () => {
-	return gulp.src('./page/temporary/*.html')
+	return gulp.src(entryPaths.template)
 		.pipe($.useref())
 		.pipe($.if('*.js', $.uglify()))
 		.pipe($.if('*.css', $.minifyCss({
@@ -89,9 +90,13 @@ gulp.task('cdnUrl', ['cdn'], () => {
 
 	}
 });
-
+//复制字体图片
+gulp.task('copy:font',() => {
+	return gulp.src('./page/css/iconfont/**.*')
+		.pipe(gulp.dest('./build/css/'))
+});
 /**加后缀处理压缩*/
-gulp.task('build', ['html:build'], () => {
+gulp.task('build', ['html:build','copy:font'], () => {
 	const revall = new $.revAll({
 		dontRenameFile: ['.html', /\/static/g],
 		dontUpdateReference: [/\/static/g]
@@ -100,7 +105,6 @@ gulp.task('build', ['html:build'], () => {
 		.pipe(revall.revision())
 		.pipe(gulp.dest('./build'))
 });
-
 
 /**开发模式启用dev*/
 gulp.task('dev', ['less', 'html:headFoot'], () => {

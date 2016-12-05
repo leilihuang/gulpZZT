@@ -44,7 +44,7 @@ textarea {
   border: none;
 }
 body {
-  background: #3c4f68;
+  background: #3c4f68 !important;
 }
 .login-box {
   min-width: 1000px;
